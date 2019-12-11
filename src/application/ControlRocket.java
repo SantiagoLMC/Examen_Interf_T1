@@ -2,31 +2,33 @@ package application;
 import java.io.IOException;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextField;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class ControlRocket {
 	@FXML
-	TextField user;
+	JFXTextField user;
 	
 	@FXML
-	PasswordField passwd;
+	JFXTextField passwd;
 	
 	@FXML
 	JFXButton login;
 	
 	@FXML
-	Pane img1;
+	ImageView img1;
 	
 	@FXML
-	Pane img2;
+	ImageView img2;
 //	Main main;
 //	Stage stage;
 //
@@ -53,6 +55,10 @@ public class ControlRocket {
 			System.out.println("second stage ko");
 		}
 	}
+	/**
+	 * hacerLogin Es para indicar que, en el caso de que se introduzca el usuario y la contraseña correcta se procederá a pasar a 
+	 * la siguiente página.
+	 */
 	@FXML
 	public void hacerLogin() {
 		if (user.getText().equals("admin") && passwd.getText().equals("1234")) {
@@ -65,6 +71,10 @@ public class ControlRocket {
 			}
 		}
 	}
+	/**
+	 * Es para indicar a qué fxml irá.
+	 * @throws IOException
+	 */
 	private void toUrano() throws IOException {
 		Stage primaryStage = new Stage();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Urano.fxml"));

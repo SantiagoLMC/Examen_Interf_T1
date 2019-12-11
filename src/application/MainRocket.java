@@ -15,9 +15,7 @@ public class MainRocket extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			//BorderPane root = new BorderPane();
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("Mars.fxml"));
-			//	BorderPane root = new BorderPane();
 			AnchorPane root = (AnchorPane) loader.load();		
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
